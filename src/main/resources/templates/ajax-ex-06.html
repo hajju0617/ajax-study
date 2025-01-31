@@ -5,16 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ex04</title>
+    <title>ex06</title>
     <!--  jQuery CDN  -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button onclick="ex04Fn()">ex04 함수 호출!</button>
+    <button onclick="ex06Fn()">ex06 함수 호출!</button>
 </body>
 <script>
     // ↑위 버튼 클릭시 아래↓ 함수 호출.
-    const ex04Fn = () => {
+    const ex06Fn = () => {
         const val1 = "Hello SpringBoot!";
 
         const params = {
@@ -23,9 +23,9 @@
         };
         $.ajax({
             // 요청 방식 : post
-            // 요청 주소 : /ex04
+            // 요청 주소 : /ex06
             type: "post",
-            url: "/ex04",
+            url: "/ex06",
             // ↓ 위에서 만든 객체 사용.
             data: params,
             // ↓ 요청이 성공했을 때 실행 되는 부분.
