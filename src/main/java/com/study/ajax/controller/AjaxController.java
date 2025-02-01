@@ -92,6 +92,7 @@ public class AjaxController {
         System.out.println("ajaxDto.getParam1() = " + ajaxDto.getParam1());
         System.out.println("ajaxDto.getParam2() = " + ajaxDto.getParam2());
         return ResponseEntity.status(HttpStatus.OK).body(ajaxDto);
+//        return new ResponseEntity<>(ajaxDto, HttpStatus.OK);      // 이 방식도 가능.
     }
 
     @PostMapping("/ex10")
@@ -102,5 +103,6 @@ public class AjaxController {
         List<AjaxDto> dtoList = DTOList();
         dtoList.add(ajaxDto);
         return ResponseEntity.status(HttpStatus.OK).body(dtoList);
+//        return new ResponseEntity<>(dtoList, HttpStatus.OK);      // 이 방식도 가능.
     }
 }
