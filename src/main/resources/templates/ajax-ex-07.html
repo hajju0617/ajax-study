@@ -26,8 +26,9 @@
             // 요청 주소 : /ex07
             type: "post",
             url: "/ex07",
-            // ↓ 위에서 만든 객체 사용. (JSON 형태로 요청 보냄.)
+            // ↓ 위에서 만든 객체 사용. (JSON.stringify() 메서드는 JS 객체를 JSON 형태로 변환함.)
             data: JSON.stringify(params),
+            // ↓ 클라이언트가 전송할 데이터의 형식을 지정하는 헤더. (서버가 받을 데이터가 JSON 형식임을 나타냄.)
             contentType: "application/json",
             // ↓ 요청이 성공했을 때 실행 되는 부분.
             success: function (res) {
@@ -37,7 +38,7 @@
             },
             // ↓ 요청이 실패했을 때 실행되는 부분.
             error: function () {
-                console.log("실패!")
+                console.log("실패!");
             }
         })
     }
